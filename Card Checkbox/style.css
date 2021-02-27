@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ddd;
+}
+.card{
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+}
+.card:hover{
+    background-color: #c5ffcd;
+}
+.card.active::after{
+    background-color: #27c43c;
+    opacity: 1;
+}
+.card.active::before{
+    border: 3px solid #27c43c;
+    opacity: 1;
+}
+.card.active .fundo .conteudo{
+    color: #27c43c;
+}
+.card::after{
+    content: '+';
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(0px, 0px);
+    transition: .5s;
+    opacity: 0;
+}
+.card::before{
+    content: '';
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    transition: .5s;
+    opacity: 0;
+}
+.card .fundo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.card .fundo .conteudo{
+    text-align: center;
+    color: #1f1f1f;
+    transition: .5s;
+}
+.card .fundo .conteudo i{
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+.card .fundo .conteudo h1{
+    font-size: 20px;
+    text-transform: uppercase;
+}

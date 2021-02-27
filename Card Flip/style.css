@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: tomato;
+    overflow: hidden;
+}
+.card{
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    transform: translate3d(-50%, -50%, 0px);
+}
+.card .front, .card .back{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    transition: .5s linear ;
+}
+.card .front{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transform: perspective(600px) rotateY(0deg);
+}
+.card .front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.card .back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #fff;
+    transform: perspective(600px) rotateY(180deg);
+}
+.card .back div{
+    text-align: center;
+}
+.card .back div h1{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.card .back div ul li{
+    display: inline-block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    color: tomato;
+    text-align: center;
+    transition: .5s ease;
+}
+.card .back div ul li i{
+    line-height: 50px;
+}
+.card .back div ul li:hover{
+    color: #fff;
+    background: tomato;
+}
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}

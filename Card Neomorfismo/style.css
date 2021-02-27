@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(130deg, #4c4aa8, #a84a98, #4aa8a3, #4c4aa8, #a84a98);
+    background-size: 400%;
+    filter: blur(0.2);
+    animation: backgroundLoop 10s infinite ease-in-out;
+}
+@keyframes backgroundLoop {
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+.card{
+    margin: 10px;
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: #fff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    color: #4b9179;
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+                -2px -2px 12px rgba(255, 255, 255, 0.5),
+                2px 2px 8px rgba(0, 0, 0, 0.55);
+}
+.card:hover{
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+                inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 8px rgba(0, 0, 0, 0.55);
+    background: #ffffff36;
+    color: #fff;
+    transition: .9s;
+}
+.card:hover button{
+    color: #fff;
+}
+.card main{
+    height: 280px;
+    margin-bottom: 5px;
+}
+.card i{
+    font-size: 100px;
+    margin-bottom: 15px;
+    transition: .4s;
+}
+.card i:hover{
+    filter: brightness(1.2);
+}
+.card h1{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.card h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.card p{
+    font-size: 17px;
+    font-weight: 450;
+}
+.card button{
+    font-size: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #4b9179;
+    font-weight: 550;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1),
+                inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+                inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+                inset 2px 2px 8px rgba(0, 0, 0, 0.55);
+}
+.card button:hover{
+    box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
+                -2px -2px 12px rgba(255, 255, 255, 0.5),
+                2px 2px 8px rgba(0, 0, 0, 0.55);
+    background: #ffffff36;
+    transition: .8s;
+}
+@media (max-width: 1000px) {
+    body{
+        display: block;
+        height: 100%;
+    }
+    .card{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+}

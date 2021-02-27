@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #020016;
+    width: 100vw;
+    height: 100vh;
+}
+.area-card{
+    width: 300px;
+    margin-right: 20px;
+}
+.area-card:hover img{
+    transform: translate3d(0px, 15px, 0px);
+    filter: brightness(0.5);
+}
+.area-card:hover .area-text{
+    transform: translate3d(0px, -35px, 0px);
+    background-color: #00000081;
+}
+.area-card img{
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all .5s;
+    filter: brightness(1.1);
+}
+.area-card .area-text{
+    width: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    margin-top: 10px;
+    transform: translate3d(0px, 0px, 0px);
+    transition: all .5s;
+    color: #fff;
+}
+.area-card .area-text h1{
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.area-card .area-text p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: justify;
+}

@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(130deg, azure, aquamarine);
+}
+.card{
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(-130deg, #6b209c, #1e0e55);
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.card img{
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: ease .3s;
+}
+.card img.active{
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    margin-top: 0px;
+    z-index: 123456;
+    border: none;
+}
+.card h1{
+    font-size: 18px;
+    font-weight: 600px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.card h2{
+    font-size: 17px;
+    font-weight: 500px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.card p{
+    font-size: 15px;
+    font-weight: 450px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.card button{
+    width: 50%;
+    border-radius: 15px;
+    height: 30px;
+    border: 2px solid #fff;
+    background: none;
+    color: #fff;
+    font-weight: 450;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.card button:hover{
+    background: #ffffff2f;
+}
+.card ul{
+    position: relative;
+    margin-top: -315px;
+    width: 50px;
+    transition: ease .3s;
+    opacity: 1;
+}
+.card ul.imgActive{
+    transform: translate3d(-45px, 0px, 0px);
+    opacity: 0;
+}
+.card ul li {
+    display: block;
+    width: 45px;
+    height: 35px;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background: #fff;
+    margin-top: 15px;
+}
+.card ul li i{
+    font-size: 20px;
+    line-height: 35px;
+    color: #1e0e55;
+}
